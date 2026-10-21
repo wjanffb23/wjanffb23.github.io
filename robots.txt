@@ -1,0 +1,5 @@
+# 모든 검색로봇의 수집을 허용하고, 채용 사이트의 사이트맵 위치를 알려 줍니다.
+User-agent: *
+Allow: /
+
+Sitemap: https://wjanffb23.github.io/woojin/sitemap.xml

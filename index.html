@@ -146,6 +146,7 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .lead { max-width: 32em; margin: 0; color: var(--on-dark-2); font-size: 1.0625rem; }
+.lead .ln { display: block; } /* 소개 문구는 정해 둔 세 줄로 */
 .cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
 
 /* 버튼 (채용 사이트와 같은 모양) */
@@ -195,7 +196,8 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 }
 @media (max-width: 520px) {
   .hero-inner { padding-block: 52px 60px; }
-  .lead { font-size: 1rem; }
+  /* 세 줄이 그대로 유지되게: 화면이 아주 좁으면 글자 크기만 줄어듦 (가장 긴 줄 폭 ≈ 글자 크기 × 17.2, 여유 포함 18) */
+  .lead { font-size: 1rem; font-size: min(1rem, calc((100vw - 32px) / 18)); }
   .cta .btn { width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -226,7 +228,7 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
     <div class="wrap hero-inner">
       <span class="hero-chip">5톤 윙바디 고정노선 지입</span>
       <h1>(주)우진물류 <span class="grad">기사모집</span></h1>
-      <p class="lead">지역별 고정노선의 상하차 방식과 휴무, 월 매출과 예상 순수익을 채용 사이트에서 한눈에 확인하고 바로 상담하세요.</p>
+      <p class="lead"><span class="ln">지역별 고정노선의 상하차 방식과 휴무,</span> <span class="ln">월 매출과 예상 순수익을 채용 사이트에서</span> <span class="ln">한눈에 확인하고 바로 상담하세요.</span></p>
       <div class="cta">
         <a class="btn btn-light" href="https://wjanffb23.github.io/woojin/">채용 사이트 바로가기<svg aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
         <a class="btn btn-ghost-dark" href="tel:16004438"><svg aria-hidden="true"><use href="#icon-phone"></use></svg>전화 <span class="num">1600-4438</span></a>

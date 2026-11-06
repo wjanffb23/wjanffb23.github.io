@@ -19,8 +19,8 @@
 <meta property="og:image" content="https://wjanffb23.github.io/woojin/og-image.png?v=7">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="600">
-<link rel="icon" href="https://wjanffb23.github.io/woojin/logo.png">
-<link rel="apple-touch-icon" href="https://wjanffb23.github.io/woojin/logo.png">
+<link rel="icon" href="https://wjanffb23.github.io/woojin/logo.png?v=2">
+<link rel="apple-touch-icon" href="https://wjanffb23.github.io/woojin/logo.png?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap">
@@ -43,9 +43,10 @@
   --primary-ink: #1559B7;
   --primary-soft: #EBF3FE;
   --light-hover: #E6EFF9;
-  --mark-bg: #0B2A4A;
-  --mark-fg: #FFFFFF;
-  --mark-dot: #22B5E6;
+  --logo-navy: #002248;
+  --logo-gray: #7C8594;
+  --logo-blue: #1068B0;
+  --logo-sky: #1FB6E3;
   --wordmark: #0B2A4A;
   --bg: #F5F7FB;
   --surface: #FFFFFF;
@@ -70,8 +71,7 @@
     --hero-c: #134A96;
     --primary-ink: #8AB8FF;
     --primary-soft: #14294A;
-    --mark-bg: #FFFFFF;
-    --mark-fg: #0B2A4A;
+    --logo-navy: #F2F6FB;
     --wordmark: #FFFFFF;
     --bg: #0A1220;
     --surface: #111B2B;
@@ -179,7 +179,7 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 /* 꼬리말 */
 .footer { background: var(--hero-a); color: var(--on-dark-2); font-size: 0.875rem; }
 .footer-inner { display: grid; gap: 12px; padding-block: 28px calc(32px + env(safe-area-inset-bottom, 0px)); }
-.f-logo { display: inline-flex; align-items: center; gap: 10px; color: var(--on-dark); font-size: 1.0625rem; font-weight: 800; --mark-bg: #FFFFFF; --mark-fg: #0B2A4A; }
+.f-logo { display: inline-flex; align-items: center; gap: 10px; color: var(--on-dark); font-size: 1.0625rem; font-weight: 800; --logo-navy: #FFFFFF; }
 .f-mark { flex: none; width: 32px; height: 32px; }
 .biz { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 0; padding: 0; list-style: none; }
 .legal { display: flex; flex-wrap: wrap; gap: 14px; }
@@ -202,7 +202,7 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="logo-mark" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" style="fill: var(--mark-bg, #0B2A4A)"/><path d="M13.5 21.5 21.8 43 32 25.5 42.2 43 49 25.5" fill="none" stroke-width="6.2" stroke-linecap="round" stroke-linejoin="round" style="stroke: var(--mark-fg, #FFFFFF)"/><circle cx="50.5" cy="20" r="5.6" style="fill: var(--mark-dot, #22B5E6)"/></symbol>
+  <symbol id="logo-mark" viewBox="0 0 100 100"><path style="fill: var(--logo-navy, #002248)" d="M8.21 72.55L24.41 63.57L32.09 67.83L55.35 54.95L70.4 63.29L31.75 84.7A1.66 1.66 0 0 1 30.14 84.7Z"/><path style="fill: var(--logo-blue, #1068B0)" d="M75.59 66.73L91.79 75.71L52.36 97.55A1.66 1.66 0 0 1 50.75 97.55L37.98 90.48A1.66 1.66 0 0 1 37.98 87.57Z"/><path style="fill: var(--logo-gray, #7C8594)" d="M8.21 25.04A1.66 1.66 0 0 1 9.07 23.59L21.94 16.46A1.66 1.66 0 0 1 24.41 17.91L24.41 63.57L8.21 72.55Z"/><path style="fill: var(--logo-gray, #7C8594)" d="M32.09 11.71A1.66 1.66 0 0 1 32.95 10.26L44.26 3.99A1.66 1.66 0 0 1 46.73 5.44L46.73 59.72L32.09 67.83Z"/><path style="fill: var(--logo-gray, #7C8594)" d="M55.35 4.82A1.66 1.66 0 0 1 57.81 3.37L69.54 9.87A1.66 1.66 0 0 1 70.4 11.32L70.4 63.29L55.35 54.95Z"/><path style="fill: var(--logo-sky, #1FB6E3)" d="M75.59 16.5A1.66 1.66 0 0 1 78.06 15.05L90.93 22.18A1.66 1.66 0 0 1 91.79 23.63L91.79 75.71L75.59 66.73Z"/></symbol>
   <symbol id="logo-word" viewBox="0 -33 135 37.5"><path style="fill: var(--wordmark, #0B2A4A)" d="M33.67 -12.23H0.9V-7.66H14.38V3.79H19.96V-7.66H33.67ZM17.19 -30.98C9.45 -30.98 4.02 -27.77 4.06 -22.77C4.02 -17.85 9.45 -14.73 17.19 -14.73C24.92 -14.73 30.39 -17.85 30.39 -22.77C30.39 -27.77 24.92 -30.98 17.19 -30.98ZM17.19 -26.52C21.8 -26.48 24.57 -25.23 24.57 -22.77C24.57 -20.39 21.8 -19.14 17.19 -19.14C12.62 -19.14 9.84 -20.39 9.84 -22.77C9.84 -25.23 12.62 -26.48 17.19 -26.52Z M48.4 -25.2H55.28V-29.69H35.63V-25.2H42.7C42.7 -20.82 40.28 -16.17 34.15 -14.3L37.04 -9.88C41.2 -11.21 44.01 -13.89 45.67 -17.27C47.25 -14.2 49.95 -11.76 53.87 -10.55L56.76 -14.92C50.71 -16.72 48.4 -21.09 48.4 -25.2ZM64.22 -32.07H58.6V-6.29H64.22ZM65.12 -1.33H45.63V-8.59H39.93V3.16H65.12Z M99.97 -18.16H67.28V-13.75H80.72V-11.88H70.99V-7.66H90.48V-6.25H70.99V3.55H96.93V-0.66H76.54V-2.3H96.07V-11.88H86.38V-13.75H99.97ZM95.87 -31.09H71.26V-19.69H95.87ZM76.77 -26.76H90.25V-23.98H76.77Z M133.18 -11.17H100.41V-6.8H107.75V3.75H113.42V-6.8H120.25V3.75H125.96V-6.8H133.18ZM129.47 -31.09H104.16V-26.6H123.69V-24.38H104.24V-13.4H130.33V-17.89H109.94V-20.31H129.47Z"/></symbol>
   <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="icon-phone" viewBox="0 0 24 24"><path d="M6.6 3.5h2.6l1.5 4-2 1.3a11 11 0 0 0 6.5 6.5l1.3-2 4 1.5v2.6a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>

@@ -16,9 +16,9 @@
 <meta property="og:url" content="https://wjanffb23.github.io/woojin/">
 <meta property="og:title" content="5톤 고정노선 지입기사 채용">
 <meta property="og:description" content="까대기 없는 5톤 찾으셨죠? 노선별 월 매출과 예상 순수익, 상하차·휴무 조건을 확인하고 전화·카카오톡으로 바로 상담하세요.">
-<meta property="og:image" content="https://wjanffb23.github.io/woojin/og-image.png?v=8">
+<meta property="og:image" content="https://wjanffb23.github.io/woojin/og-image.png?v=11">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="600">
+<meta property="og:image:height" content="1200">
 <link rel="icon" href="https://wjanffb23.github.io/woojin/logo.png?v=2">
 <link rel="apple-touch-icon" href="https://wjanffb23.github.io/woojin/logo.png?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -136,8 +136,9 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 .hero-chip::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--grad-b); }
 .hero h1 {
   margin: 20px 0 14px;
-  font-size: clamp(2.25rem, 1.5rem + 3.6vw, 3.75rem); font-weight: 800;
-  line-height: 1.12; letter-spacing: -0.045em;
+  /* (주)우진물류 기사모집을 항상 한 줄로: 화면이 좁으면 폭에 맞춰 글자 크기만 줄어듦 (글자 폭 ≈ 글자 크기 × 8.7, 여유 포함 9) */
+  font-size: min(clamp(2.25rem, 1.5rem + 3.6vw, 3.75rem), calc((100vw - 32px) / 9)); font-weight: 800;
+  line-height: 1.12; letter-spacing: -0.045em; white-space: nowrap;
 }
 .grad {
   background: linear-gradient(90deg, var(--grad-a), var(--grad-b));
